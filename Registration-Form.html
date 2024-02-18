@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        * {
+            font-family: sans-serif;
+            --bg1: #f69ccf;
+            --bg: #4ecbfc;
+            user-select: none;
+        }
+
+        .container {
+            padding: 50px;
+            background: linear-gradient(var(--bg), var(--bg1));
+            border: dashed black;
+        }       
+       
+        input,
+        label,
+        select{
+            margin: 5px 0;
+            text-align: center;
+        }
+
+        .date{
+           text-transform: uppercase;
+           color: rgb(97, 96, 96);
+        }
+
+    </style>
+</head>
+<body>
+
+    <form action="" method="get">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>First Name</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" maxlength="30" required placeholder="xxxx" name="First Name">
+                </div>
+                <div class="col-lg-6">
+                    <div>(Max 30 Characters Allowed)</div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label>Last Name</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" maxlength="30" required placeholder="xxxx" name="Last Name">
+
+                </div>
+                <div class="col-lg-6">
+                    <div>(Max 30 Characters Allowed)</div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label>Email</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="email" class="form-control" required placeholder="xxxx@gmail.com">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Mobile Number</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" class="form-control"  maxlength="10" required placeholder="xxxxxx7854">
+
+                </div>
+                <div class="col-lg-6">
+                    <div>(10 Digits Allowed)</div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label>Gender</label>
+                </div>
+                <div class="col-lg-1">
+                    <input type="radio" id="Male" name="Gender" value="male">
+                    <label for="Male">Male</label>
+
+                </div>
+                <div class="col-lg-8">
+                    <input type="radio" id="Female" name="Gender" value="Female">
+                    <label for="Female">Female</label>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Date of Birth(DOB)</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="date" class="form-control date">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Address</label>
+                </div>
+                <div class="col-lg-3">
+                    <textarea name="Address" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>City</label>
+                    
+                </div>
+                <div class="col-lg-3">
+                   
+                    <select name="City" class="form-control">
+                        <option value="Mathura">Mathura</option>
+                        <option value="Agra">Agra</option>
+                        <option value="Dwarka">Dwarka</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Ayodhya">Ayodhya</option>
+                        <option value="Varanasi">Varanasi</option>
+                       
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Pin Code</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" maxlength="6" placeholder="xxxx" name="Pin Code">
+                </div>
+                <div class="col-lg-6">
+                    <div>(Max 6 Numbers Allowed)</div>
+                </div>
+
+                <div class="col-lg-3">
+                    <label>State</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" placeholder="Madhya Pradesh" name="State">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Country</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="text" class="form-control" placeholder="India" name="Country">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Hobbies</label>
+                </div>
+                <div class="col-lg-3">
+                    <input type="checkbox" id="Drawing" name="Drawing" value="Drawing">
+                    <label for="Drawing">Drawing</label>
+
+                    <input type="checkbox" id="Singing" name="Singing" value="Singing">
+                    <label for="Singing">Singing</label>
+
+                    <input type="checkbox" id="Dancing" name="Dancing" value="Dancing">
+                    <label for="Dancing">Dancing</label>
+
+                    <input type="checkbox" id="Sketching" name="Sketching" value="Sketching">
+                    <label for="Sketching">Sketching</label>
+
+                    <label for="Others">Others</label>
+                    <input type="text" placeholder="Ex---" class="form-control" id="Others" name="Others">
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3">
+                    <label>Qualification</label>
+                </div>
+                <div class="col-lg-9">
+                    <input type="checkbox" id="High School" value="High School">
+                    <label for="High School">High School(10th)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="Higher School" value="Higher School">
+                    <label for="Higher School">Higher School(12th)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="Graduation" value="Graduation">
+                    <label for="Graduation">Graduation(Bachelors)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="Post Graduation" value="Post Graduation">
+                    <label for="Post Graduation">Post Graduation(Bachelors)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="Phd" value="Phd">
+                    <label for="Phd">Phd</label>
+                </div>
+
+                <div class="col-lg-3">
+                    <label>Courses Applied For</label>
+                </div>
+                <div class="col-lg-9">
+                    <input type="checkbox" id="BCA" value="BCA">
+                    <label for="BCA">BCA(Bachelor of Computer Applicaton)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="B.Com" value="B.Com">
+                    <label for="B.Com">B.Com(Bachelor of Commerce)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="B.Sc" value="B.Sc">
+                    <label for="B.Sc">B.Sc(Bachelor of Science)</label>
+                </div>
+
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="BA" value="BA">
+                    <label for="BA">BA(Bachelor of Arts)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="MCA" value="MCA">
+                    <label for="MCA">MCA(Master of Computer Application)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="M.Com" value="M.Com">
+                    <label for="M.Com">M.Com(Master of Commerce)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="M.Sc" value="M.Sc">
+                    <label for="M.Sc">M.Sc(Master of Science)</label>
+                </div>
+                <div class="col-lg-9 offset-lg-3">
+                    <input type="checkbox" id="MA" value="MA">
+                    <label for="MA">MA(Master of Arts)</label>
+                </div>
+                
+                <div class="col-lg-2 offset-lg-3">
+                    <input type="submit" class="form-control">
+                </div>
+                <div class="col-lg-2">
+                    <input type="reset" class="form-control">
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
